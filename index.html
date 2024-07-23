@@ -22,6 +22,7 @@
             border: none;
             text-align: center;
             outline: none;
+		transition: background-color 0.2s ease, color 0.2s ease;
         }
 
         .active, .collapsible:hover {
@@ -29,7 +30,7 @@
 	}
 
 	.collapsible:after {
-  	background-color: white;
+  	background-color: background;
  	}
 
 	.active {
@@ -63,12 +64,12 @@ Physics at Korea Advanced Institute of Science and Technology (KAIST) in 2017.
  </p>
 
 <div class="collapsible-container">
-    <button class="collapsible">Updates</button>
+    <button class="collapsible active">Updates</button>
     <button class="collapsible">Research</button>
     <button class="collapsible">Papers</button>
 </div>
 
-<div class="content">
+<div class="content default">
 <ul>
 <li> September 2024: starting Oberwolfach Leibniz Fellowship at 
 <a href="https://www.mfo.de/">Oberwolfach Research Institute for Mathematics</a>. </li>
@@ -134,12 +135,14 @@ to appear (2024).
 </li>
 </ul>
 
-</div>
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var coll = document.getElementsByClassName("collapsible");
         var contents = document.getElementsByClassName("content");
+        
+        // Ensure the first section is open by default
+        coll[0].classList.add("active");
+        contents[0].style.display = "block";
         
         for (var i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
@@ -160,7 +163,6 @@ to appear (2024).
     });
 </script>
 
-<div>
-
+</div>
 </body>
 </html>
