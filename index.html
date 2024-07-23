@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đinh Quý Dương</title>
     <style>
+       body {
+            font-family: Arial;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .header .left {
+            flex: 1;
+        }
+
+        .header .right img {
+            width: 200px;
+            height: auto;
+        }
+
+        .text-container {
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            text-align: justify;
+            text-justify: inter-word; /* Optional for better word spacing */
+        }
+
         .collapsible-container {
             display: flex;
             justify-content: space-around;
@@ -14,20 +48,21 @@
         .collapsible {
             background-color: #D2D2D2;
             color: black;
-		font-weight: bold;
-		font-size: 17px;
+            font-weight: bold;
+            font-size: 17px;
             cursor: pointer;
             padding: 6px;
             width: 25%;
             border: none;
             text-align: center;
             outline: none;
-		transition: background-color 0.2s ease, color 0.2s ease;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
 
         .active, .collapsible:hover {
-  	background-color: #F3DCB6;
-	}
+            background-color: #F3DCB6;
+        }
+
 
 	.collapsible:after {
   	background-color: background;
@@ -44,96 +79,73 @@
             width: 100%;
             text-align: left;
         }
+
+        .content.default {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
-<div style="max-width: 720px; margin:0 auto; font-family: Arial">
+<div class="container">
+    <div class="header">
+        <div class="left" style="max-width: 480px;">
+            <h2>Đinh Quý Dương</h2>
+            <p><i>Postdoc scholar <br>
+                Max Planck Institute for Mathematics, Bonn, Germany <br>
+                Contact: duong[dot]dinh[at]mpim-bonn[dot]mpg[dot]de</i></p>
+            <p>I completed my PhD in Mathematics (2023) and Master in Mathematical Physics (2019) at 	University of Hamburg. My supervisor was Jörg Teschner. </p>
+	<p> Before that, I completed a dual bachelor degree in Math and Physics at Korea Advanced 	Institute of Science and Technology (KAIST) in 2017.</p>
+        </div>
+        <div class="right">
+            <img src="portrait-2.jpg" alt="Portrait">
+        </div>
+    </div>
 
+    <div class="collapsible-container">
+        <button class="collapsible active">Updates</button>
+        <button class="collapsible">Research</button>
+        <button class="collapsible">Papers</button>
+    </div>
 
-<h2>Đinh Quý Dương</h2>
+    <div class="content default">
+        <ul>
+            <li>September 2024: starting Oberwolfach Leibniz Fellowship at 
+                <a href="https://www.mfo.de/">Oberwolfach Research Institute for Mathematics</a>.</li>
+            <li>September 9-13, 2024: workshop 
+                <a href="https://sites.google.com/view/ramificationheidelberg2024/">Ramification in geometric Langlands and non-abelian Hodge theory</a> 
+                in Heidelberg, with poster presentation.</li>
+            <li>May 5-9, 2025: invited talk at conference on moduli of Higgs bundles and related topics, 
+                Santiago de Compostela, Spain.</li>
+        </ul>
+    </div>
 
-<p> <i> Postdoc scholar <br>
-Max Planck Institute for Mathematics, Bonn, Germany <br>
-Contact: duong[dot]dinh[at]mpim-bonn[dot]mpg[dot]de </i> 
-</p>
+    <div class="content">
+        <p>I am broadly interested in the algebraic and differential geometry inspired by ideas from physics.</p>
+        <p>A main theme of my research is the analytic Langlands correspondence, conjectured by Teschner and developed by Etingof-Frenkel-Kazhdan. This variant/refinement of the geometric Langlands correspondence shifts the focus from sheaves to functions which are eigenfunctions of Hecke operators. This calls for an exploration of rather explicit nature. My projects with Teschner involve revisiting and making explicit certain aspects of two early approaches to the geometric Langlands correspondence: the first one by Drinfeld using Radon transform and the second by Beilinson-Drinfeld using conformal field theories techniques.</p>
+        <p>I am also interested in the inherent geometric aspects of the moduli of Higgs bundles and related ones, such as moduli of flat/projective connections on Riemann surfaces. Conformal limits, natural stratification and deformation of symplectic structures on these moduli spaces are the usual ingredients I work with. Recently, I like to think about a concrete description of branes and their mirrors in the moduli of Higgs bundles.</p>
+        <p>I have also developed interests in:
+            <ul>
+                <li>the interaction between random geometry (e.g. Schramm-Loewner evolution), real enumerative geometry and conformal field theories;</li>
+                <li>Donagi-Pantev-Simpson's approach to geometric Langlands, which uses mirror symmetry and non-abelian Hodge theories, and its relation to Drinfeld's approach;</li>
+                <li>Bridgeland's spaces of stability conditions and his complexification of moduli of Higgs bundles;</li>
+                <li>a geometric understanding of the Verlinde formula.</li>
+            </ul>
+        </p>
+    </div>
 
-<p> I completed my PhD in Mathematics (2023) and Master in Mathematical Physics (2019) at University of 
-Hamburg. My supervisor was Jörg Teschner. Before that, I completed a dual bachelor degree in Math and 
-Physics at Korea Advanced Institute of Science and Technology (KAIST) in 2017.
- </p>
-
-<div class="collapsible-container">
-    <button class="collapsible active">Updates</button>
-    <button class="collapsible">Research</button>
-    <button class="collapsible">Papers</button>
+    <div class="content">
+        <ul>
+            <li><em>An analogue of spectral transforms for holomorphic connections</em>, with T. Figiel and J. Teschner, to appear (2024).</li>
+            <li><em>Rank-2 wobbly bundles from special divisors on spectral curves</em>,  
+                <a href="https://arxiv.org/abs/2406.04224">arXiv:2406.04224</a> (2024).</li>
+            <li><em>Classical limit of the geometric Langlands correspondence for SL_2(C)</em>, with J. Teschner,  
+                <a href="https://arxiv.org/abs/2312.13393">arXiv:2312.13393</a> (2023).</li>
+            <li><em>Stratified description of the moduli spaces of Higgs bundles and connections</em>, PhD Thesis,  
+                <a href="https://ediss.sub.uni-hamburg.de/bitstream/ediss/10855/1/Dinh-thesis.pdf">electronic publication</a> (2023).</li>
+        </ul>
+    </div>
 </div>
-
-<div class="content default">
-<ul>
-<li> September 2024: starting Oberwolfach Leibniz Fellowship at 
-<a href="https://www.mfo.de/">Oberwolfach Research Institute for Mathematics</a>. </li>
-<li> September 9-13, 2024: workshop 
-<a href="https://sites.google.com/view/ramificationheidelberg2024/">Ramification in geometric Langlands and non-abelian Hodge theory </a> 
-in Heidelberg, with poster presentation. </li>
-<li> May 5-9, 2025: invited talk at conference on moduli of Higgs bundles and related topics, 
-Santiago de Compostela, Spain. </li>
-</ul>
-</div>
-
-<div class="content">
-<p>
-I am broadly interested in the algebraic and differential geometry inspired by ideas from physics. </p>
-
-<p>
-A main theme of my research is the analytic Langlands correspondence, conjectured by Teschner 
-and developed by Etingof-Frenkel-Kazhdan. 
-This variant/refinement of the geometric Langlands correspondence 
-shifts the focus from sheaves to functions which are  
-eigenfunctions of Hecke operators. 
-This calls for an exploration of rather explicit nature. 
-My projects with Teschner involve revisiting and making explicit 
-certain aspects of two early approaches to the geometric Langlands correspondence: 
-the first one by Drinfeld using Radon transform and the second by Beilinson-Drinfeld using 
-conformal field theories techniques. 
-</p>
-
-<p>
-I am also interested in the inherent geometric aspects of the moduli of Higgs bundles and related ones, such 
-as moduli of flat/projective connections on Riemann surfaces. Conformal limits, natural stratification and  
-deformation of symplectic structures on these moduli spaces are the usual ingredients I work with. 
-Recently, I like to think about a concrete description of branes and their mirrors in the moduli of Higgs bundles.
-</p>
-
-<p>
-I have also developed interests in:
-<ul>
-<li> the interaction between random geometry (e.g. Schramm-Loewner evolution), real enumerative geometry
-and conformal field theories;
-<li> Donagi-Pantev-Simpson's approach to geometric Langlands, which uses mirror symmetry 
-and non-abelian Hodge theories, and its relation to Drinfeld's approach;
-<li> Bridgeland's spaces of stability conditions and his complexification of moduli of Higgs bundles;
-<li> a geometric understanding of the Verlinde formula.
-</ul>
-</p>
-
-</div>
-
-<div class="content">
-<ul>
-<li> <em> An analogue of spectral transforms for holomorphic connections</em>, with T. Figiel and J. Teschner, 
-to appear (2024). 
-</li>
-<li> <em> Rank-2 wobbly bundles from special divisors on spectral curves</em>,  <br>
-<a href="https://arxiv.org/abs/2406.04224">arXiv:2406.04224</a> (2024). 
-</li>
-<li> <em> Classical limit of the geometric Langlands correspondence for SL_2(C)</em>, with J. Teschner, <br>
-<a href="https://arxiv.org/abs/2312.13393">arXiv:2312.13393</a> (2023). 
-</li>
-<li> <em>Stratified description of the moduli spaces of Higgs bundles and connections</em>, PhD Thesis, <br>
-<a href="https://ediss.sub.uni-hamburg.de/bitstream/ediss/10855/1/Dinh-thesis.pdf">electronic publication</a> (2023).
-</li>
-</ul>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -163,6 +175,5 @@ to appear (2024).
     });
 </script>
 
-</div>
 </body>
 </html>
