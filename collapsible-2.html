@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Đinh Quý Dương</title>
+
+<style>
+div {
+  style="font-family: Arial";
+  margin: 30px;
+  max-width: 700px;
+  border: 0px solid #4CAF50;
+}</style>
+
+
+<style>
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px
+}</style>
+
+<style>
+p + ul {
+    margin-top: 0px;
+}</style>
+
+<style>
+.collapsible {
+  background-color: light grey;
+  color: black;
+  cursor: pointer;
+  padding: 0px;
+  width: 200px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-family: "Arial";
+  font-weight: bold;
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 0px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0px;
+  max-height: 0;
+  max-width: 720px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+}
+</style>
+
+</head>
+<body>
+
+<div>
+<h2 style="font-family: Arial">  Đinh Quý Dương  </h2>
+
+<p style="font-family: Arial"> <i> Postdoc scholar <br>
+Max Planck Institute for Mathematics, Bonn, Germany <br>
+Contact: duong[dot]dinh[at]mpim-bonn[dot]mpg[dot]de </i> 
+</p>
+
+<p style="font-family: Arial">
+I completed my PhD in Mathematics (2023) and Master in Mathematical Physics (2019) at University of 
+Hamburg. My supervisor was Jörg Teschner. Before that, I completed a dual bachelor degree in Math and 
+Physics at Korea Advanced Institute of Science and Technology (KAIST) in 2017.
+ </p>
+
+<button class="collapsible"> Updates </button>
+<div class="content">
+<ul style="font-family: Arial;
+ margin-top: -2px">
+<li> September 2024: starting my Oberwolfach Leibniz Fellowship at 
+<a href="https://www.mfo.de/">Oberwolfach Research Institute for Mathematics</a>.
+<li> September 9-13, 2024: attending workshop 
+<a href="https://sites.google.com/view/ramificationheidelberg2024/">Ramification in geometric Langlands and non-abelian Hodge theory</a> 
+in Heidelberg, with poster presentation.
+</li>
+</ul>
+</div>
+
+<button class="collapsible"> Research interests </button>
+<div class="content">
+<p style="font-family: Arial">
+I am broadly interested in the algebraic and differential geometry inspired by ideas from physics. </p>
+
+<p style="font-family: Arial">
+A main theme of my research is the analytic Langlands correspondence, conjectured by Teschner 
+and developed by Etingof-Frenkel-Kazhdan. 
+A variant/refinement of the geometric Langlands correspondence, 
+this correspondence shifts the focus from sheaves to functions which are  
+eigenfunctions of Hecke operators. 
+This calls for an exploration of rather explicit nature. 
+My approach (with Teschner) involves revisiting and making explicit 
+certain aspects of two early approaches to the geometric Langlands correspondence: 
+the first one by Drinfeld using Radon transform and the second by Beilinson-Drinfeld using 
+conformal field theories techniques. 
+</p>
+
+<p style="font-family: Arial">
+I am also interested in the inherent geometric aspects of the moduli of Higgs bundles and related ones, such 
+as moduli of flat/projective connections on Riemann surfaces. Conformal limits, natural stratification and  
+deformation of symplectic structures on these moduli spaces are the usual ingredients I work with. 
+Recently, I like to think about a concrete description of branes and their mirrors in the moduli of Higgs bundles.
+</p>
+
+<p style="font-family: Arial">
+I have also developed interests in:
+<ul style="font-family: Arial">
+<li> the interaction between random geometry (e.g. Schramm-Loewner evolution), real enumerative geometry
+and conformal field theories;
+<li> Donagi-Pantev-Simpson's approach to geometric Langlands, which uses mirror symmetry 
+and non-abelian Hodge theories, and its relation to Drinfeld's approach;
+<li> Bridgeland's spaces of stability conditions and his complexification of moduli of Higgs bundles;
+<li> a geometric understanding of the Verlinde formula.
+</ul>
+</p>
+</div>
+
+
+<button class="collapsible"> Papers </button>
+<div class="content">
+<ul style="font-family: Arial">
+<li> <em> An analogue of spectral transforms for holomorphic connections</em>, with T. Figiel and J. Teschner, 
+to appear (2024). 
+</li>
+<li> <em> Rank-2 wobbly bundles from special divisors on spectral curves</em>,  <br>
+<a href="https://arxiv.org/abs/2406.04224">arXiv:2406.04224</a> (2024). 
+</li>
+<li> <em> Classical limit of the geometric Langlands correspondence for SL_2(C)</em>, with J. Teschner, <br>
+<a href="https://arxiv.org/abs/2312.13393">arXiv:2312.13393</a> (2023). 
+</li>
+<li> <em>Stratified description of the moduli spaces of Higgs bundles and connections</em>, PhD Thesis, <br>
+<a href="https://ediss.sub.uni-hamburg.de/bitstream/ediss/10855/1/Dinh-thesis.pdf">electronic publication</a> (2023).
+</li>
+</ul>
+</div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+</body>
+</html>
