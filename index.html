@@ -11,7 +11,7 @@
 
         .container {
             max-width: 680px;
-            margin: 15px auto;
+            margin: auto;
 		margin-top: 50px;
 		margin-bottom: 50px;
         }
@@ -35,7 +35,6 @@
             flex: 1;
 	width: auto;
         max-width: 170px;
-	min-width: 27%;	
 	margin-right: 2px;
 	margin-left: 2px;
         }
@@ -96,6 +95,22 @@
 
         .content.default {
             display: block;
+        }
+
+	/* Media query for screens smaller than 600px */
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header .right {
+                margin-top: 10px;
+            }
+
+            .header .left {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
