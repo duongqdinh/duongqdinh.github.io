@@ -215,16 +215,16 @@ at University of Hamburg, supervised by
 
     <div class="content">
         <ul style="list-style-position: inside; padding-left: 0;">
-	<li><em>Shaky and wobbly Higgs bundles</em>, with C. Nollau, to appear.
-	<li><em>Bialynicki-Birula stratification and apparent singularities of projective structures</em>, with T. Figiel and J. Teschner, to appear.  
+	<li><em>Shaky and wobbly Higgs bundles</em>, with C. Nollau, to appear
+	<li><em>Bialynicki-Birula stratification and apparent singularities of projective structures</em>, with T. Figiel and J. Teschner, to appear  
 	<li><em>Lagrangian correspondences for moduli spaces of Higgs bundles and holomorphic connections</em>, with P. Dimakis and S. Xu (2026)  
                 [<a href="https://arxiv.org/abs/2604.14127">arXiv</a>].</li>  
         <li><em>From &lambda;-connections to PSL(2,<b>C</b>)-opers with apparent singularities</em>, (2024)  
-                [<a href="https://arxiv.org/abs/2411.03244">arXiv</a>], submitted.</li>    
+                [<a href="https://arxiv.org/abs/2411.03244">arXiv</a>].</li>    
 	<li><em> Rank-2 wobbly bundles from special divisors on spectral curves</em>, (2024)  
-                [<a href="https://arxiv.org/abs/2406.04224">arXiv</a>], submitted.</li>
-            <li><em>Classical limit of the geometric Langlands correspondence for SL(2,<b>C</b>)</em>, with J. Teschner, (2023),   
-                [<a href="https://arxiv.org/abs/2312.13393">arXiv</a>], submitted.</li>
+                [<a href="https://arxiv.org/abs/2406.04224">arXiv</a>].</li>
+            <li><em>Classical limit of the geometric Langlands correspondence for SL(2,<b>C</b>)</em>, with J. Teschner, (2023)  
+                [<a href="https://arxiv.org/abs/2312.13393">arXiv</a>].</li>
             <li><em>Stratified description of the moduli spaces of Higgs bundles and connections</em>, PhD Thesis, (2023)  
                 [<a href="https://ediss.sub.uni-hamburg.de/bitstream/ediss/10855/1/Dinh-thesis.pdf">electronic publication</a>].</li>
         </ul>
@@ -243,11 +243,7 @@ at University of Hamburg, supervised by
         </p>
     </div>
 	
-<div id="footer-img-updates" class="footer-img" style="margin-top: 60px;">
-    <img src="monkey-cranes.jpg" style="max-width: 100%; height: auto; display: block;" alt="monkey-cranes" />
-    <p style="font-size:9px; text-align: right; margin: 0;"> Giga Chōmeijin (戯画釣名人 / Humorous Picture of a Fishing Master) -- Koichi Takeuchi </p>
-</div>
-<div id="footer-img-other" class="footer-img" style="margin: 60px auto 0 auto; max-width: 65%; display: none;">
+<div class="footer-img" style="margin: 60px auto 0 auto; max-width: 70%;">
     <img src="monkey-cranes.jpg" style="max-width: 100%; height: auto; display: block;" alt="monkey-cranes" />
     <p style="font-size:9px; text-align: right; margin: 0;"> Giga Chōmeijin (戯画釣名人 / Humorous Picture of a Fishing Master) -- Koichi Takeuchi </p>
 </div>
@@ -260,21 +256,10 @@ at University of Hamburg, supervised by
     document.addEventListener("DOMContentLoaded", function() {
         var coll = document.getElementsByClassName("collapsible");
         var contents = document.getElementsByClassName("content");
-        var imgUpdates = document.getElementById("footer-img-updates");
-        var imgOther = document.getElementById("footer-img-other");
-
-        function syncFooterImage() {
-            // Updates is the first button (index 0). Show black-forest when it's active,
-            // otherwise show the monkey-cranes painting.
-            var updatesActive = coll[0].classList.contains("active");
-            imgUpdates.style.display = updatesActive ? "block" : "none";
-            imgOther.style.display = updatesActive ? "none" : "block";
-        }
 
         // Ensure the first section is open by default
         coll[0].classList.add("active");
         contents[0].style.display = "block";
-        syncFooterImage();
 
         for (var i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
@@ -290,7 +275,6 @@ at University of Hamburg, supervised by
                     this.classList.add("active");
                     contents[index].style.display = "block";
                 }
-                syncFooterImage();
             });
         }
     });
